@@ -12,7 +12,7 @@ pipline {
         mkdir logs
         mkdir html
         mkdir html\\report
-        "C:\\jmeter\\apache-jmeter-5.6.3\\bin\\jmeter.bat" -n -t PF1_RUM_Scenarios.jmx -l log/results.jtl -e -o html/report
+        "C:\\jmeter\\apache-jmeter-5.6.3\\bin\\jmeter.bat" -n -t API.jmx -l log/results.jtl -e -o html/report
         '''
 
       }
