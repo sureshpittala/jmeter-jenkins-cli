@@ -48,6 +48,7 @@ pipeline {
 }
 stage('AiPERF History') {
     steps {
+        echo '=== AIPERF HISTORY STAGE STARTED ==='
         bat 'python execution_history_writer.py'
     }
 }
