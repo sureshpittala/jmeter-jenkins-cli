@@ -46,3 +46,8 @@ pipeline {
     }
   }
 }
+stage('AiPERF History') {
+    steps {
+        bat 'python execution_history_writer.py'
+    }
+}
