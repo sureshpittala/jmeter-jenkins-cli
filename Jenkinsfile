@@ -24,6 +24,12 @@ pipeline {
         '''
       }
     }
+    stage('AiPERF History') {
+    steps {
+        echo '=== AIPERF HISTORY STAGE STARTED ==='
+        bat 'python execution_history_writer.py'
+    }
+}
     stage('Reports') {
       steps {
         perfReport sourceDataFiles: 'logs/results.jtl'
@@ -45,10 +51,4 @@ pipeline {
       archiveArtifacts 'logs/results.jtl, html/report/**'
     }
   }
-}
-stage('AiPERF History') {
-    steps {
-        echo '=== AIPERF HISTORY STAGE STARTED ==='
-        bat 'python execution_history_writer.py'
-    }
 }
